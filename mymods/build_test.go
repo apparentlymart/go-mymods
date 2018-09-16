@@ -26,7 +26,7 @@ func TestBuild(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer os.RemoveAll(dir) // bee
+	defer os.RemoveAll(dir)
 
 	mymodsPath, err := filepath.Abs("../")
 	if err != nil {
